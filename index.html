@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hafiz Haseeb | Hacker Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrix"></canvas>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen">
+
+<div class="loginBox">
+
+<div class="icon">
+<i class="fas fa-user-secret"></i>
+</div>
+
+<h1>SECURE ACCESS</h1>
+
+<p class="status">
+Authorized Users Only
+</p>
+
+<div class="inputBox">
+
+<i class="fas fa-user"></i>
+
+<input
+type="text"
+placeholder="Username"
+id="username">
+
+</div>
+
+<div class="inputBox">
+
+<i class="fas fa-lock"></i>
+
+<input
+type="password"
+placeholder="Password"
+id="password">
+
+</div>
+
+<button id="loginBtn">
+
+ACCESS SYSTEM
+
+</button>
+
+<p id="loginMessage"></p>
+
+</div>
+
+</div>
+
+<!-- BOOT SCREEN -->
+
+<div id="bootScreen">
+
+<div class="boot-logo">
+
+<i class="fas fa-user-secret"></i>
+
+<h2>CYBER SECURITY SYSTEM</h2>
+
+</div>
+
+<div class="terminal">
+  <p id="bootStatus"></p>
+
+<p>> Connecting To Secure Server...</p>
+
+<p>> Verifying Credentials...</p>
+
+<p>> Loading System Files...</p>
+
+<p>> Initializing Dashboard...</p>
+
+<p>> Access Granted ✔</p>
+
+</div>
+
+</div>
+
+<!-- MAIN DASHBOARD -->
+
+<div id="dashboard">
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>MY PROJECTS</h2>
+
+<div class="project-grid">
+
+<div class="project">
+<h3>Business Website</h3>
+<p>Modern responsive website.</p>
+</div>
+
+<div class="project">
+<h3>E-Commerce Store</h3>
+<p>Online shopping platform.</p>
+</div>
+
+<div class="project">
+<h3>Admin Dashboard</h3>
+<p>Complete admin panel.</p>
+</div>
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>Premium personal portfolio.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- DOWNLOAD CV -->
+
+<section id="cv">
+
+<a href="assets/Hafiz-Haseeb-CV.pdf"
+download
+class="cv-btn">
+
+DOWNLOAD CV
+
+</a>
+
+</section>
+
+<nav>
+
+<div class="logo-nav">
+
+HAFIZ HASEEB
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+  <section class="hero-banner">
+
+<div class="hero-left">
+
+<h2>CYBER SECURITY MODE</h2>
+
+<p>
+Building Modern, Fast & Secure Websites
+With Premium UI & Clean Code.
+</p>
+
+<a href="#contact" class="hire-btn">
+Hire Me
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="profile-ring">
+
+<img src="assets/img/profile.jpg" alt="Profile">
+
+</div>
+
+</div>
+
+</section>
+
+  <section class="stats">
+
+<div class="stat-card">
+<h2 id="clients">0</h2>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat-card">
+<h2 id="projectsDone">0</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat-card">
+<h2 id="experience">0</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-card">
+<h2 id="coffee">0</h2>
+<p>Coffee Cups</p>
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="profile">
+
+<img src="assets/img/profile.jpg" alt="Hafiz Haseeb">
+
+</div>
+
+<div class="about-text">
+
+<h2>Who Am I?</h2>
+
+<p>
+Hi, I'm Hafiz Haseeb, a Full Stack Web Developer.
+I build modern, responsive, fast and secure websites using
+HTML, CSS, JavaScript, React, Node.js, PHP and Laravel.
+</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</div>
+
+</section>
+<!-- LIVE INFO -->
+
+<section class="live-info">
+
+<div class="info-box">
+<h3>IP ADDRESS</h3>
+<p id="ip">192.168.10.25</p>
+</div>
+
+<div class="info-box">
+<h3>DATE</h3>
+<p id="date"></p>
+</div>
+
+<div class="info-box">
+<h3>TIME</h3>
+<p id="clock"></p>
+</div>
+
+</section>
+
+<h1>HAFIZ HASEEB</h1>
+
+<p id="typing"></p>
+
+</header>
+
+<!-- SYSTEM PANEL -->
+
+<section class="panel">
+
+<div class="left-panel">
+
+<h2>SYSTEM STATUS</h2>
+
+<div class="bar">
+<span>CPU</span>
+<div class="progress"><div class="cpu"></div></div>
+</div>
+
+<div class="bar">
+<span>RAM</span>
+<div class="progress"><div class="ram"></div></div>
+</div>
+
+<div class="bar">
+<span>NETWORK</span>
+<div class="progress"><div class="network"></div></div>
+</div>
+
+<div class="bar">
+<span>SECURITY</span>
+<div class="progress"><div class="security"></div></div>
+</div>
+
+</div>
+
+<div class="right-panel">
+
+<div class="terminal-window">
+
+<div class="terminal-header">
+
+<span class="red"></span>
+<span class="yellow"></span>
+<span class="green"></span>
+
+</div>
+
+<div class="terminal-body">
+<div class="terminal-body" id="terminal"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>CONTACT ME</h2>
+
+<div class="contact-card">
+
+<a href="tel:+923001234567">
+<i class="fas fa-phone"></i>
++92 300 1234567
+</a>
+
+<a href="mailto:your@email.com">
+<i class="fas fa-envelope"></i>
+your@email.com
+</a>
+
+<a href="https://wa.me/923001234567" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+<div id="cursor"></div>
+
+<div id="cursorBlur"></div>
+</body>
+</html>

@@ -1,0 +1,1060 @@
+/* ===========================
+   GLOBAL SETTINGS
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Share Tech Mono',monospace;
+}
+
+body{
+background:#000;
+color:#00ff88;
+overflow:hidden;
+}
+
+/* MATRIX */
+
+#matrix{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+background:#000;
+}
+
+/* ===========================
+LOGIN SCREEN
+=========================== */
+
+#loginScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(5px);
+z-index:100;
+}
+
+.loginBox{
+width:370px;
+max-width:90%;
+padding:35px;
+border:2px solid #00ff88;
+border-radius:18px;
+background:rgba(0,0,0,.6);
+box-shadow:0 0 40px #00ff88;
+text-align:center;
+}
+
+.icon{
+font-size:65px;
+margin-bottom:20px;
+text-shadow:0 0 25px #00ff88;
+}
+
+.loginBox h1{
+font-size:32px;
+margin-bottom:10px;
+letter-spacing:2px;
+}
+
+.status{
+margin-bottom:25px;
+color:#9fffd3;
+}
+
+.inputBox{
+position:relative;
+margin:18px 0;
+}
+
+.inputBox i{
+position:absolute;
+left:15px;
+top:16px;
+color:#00ff88;
+}
+
+.inputBox input{
+width:100%;
+padding:14px 14px 14px 45px;
+background:#050505;
+border:1px solid #00ff88;
+border-radius:8px;
+color:#00ff88;
+outline:none;
+font-size:16px;
+}
+
+.inputBox input:focus{
+box-shadow:0 0 15px #00ff88;
+}
+
+#loginBtn{
+width:100%;
+padding:14px;
+margin-top:15px;
+border:none;
+background:#00ff88;
+color:#000;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+#loginBtn:hover{
+transform:scale(1.03);
+box-shadow:0 0 30px #00ff88;
+}
+
+#loginMessage{
+margin-top:18px;
+font-size:15px;
+color:#ff4444;
+}
+
+/* ===========================
+BOOT SCREEN
+=========================== */
+
+#bootScreen{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#000;
+justify-content:center;
+align-items:center;
+z-index:90;
+}
+
+.terminal{
+width:90%;
+max-width:700px;
+border:2px solid #00ff88;
+padding:25px;
+border-radius:12px;
+background:#050505;
+box-shadow:0 0 30px #00ff88;
+}
+
+.terminal p{
+margin:12px 0;
+font-size:18px;
+}
+
+/* ===========================
+DASHBOARD
+=========================== */
+
+#dashboard{
+display:none;
+padding:50px 20px;
+text-align:center;
+min-height:100vh;
+}
+
+header h1{
+font-size:50px;
+text-shadow:0 0 20px #00ff88;
+}
+
+#typing{
+margin-top:20px;
+font-size:22px;
+color:#b9ffe1;
+}
+
+/* ===========================
+MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.loginBox{
+padding:25px;
+}
+
+header h1{
+font-size:34px;
+}
+
+#typing{
+font-size:18px;
+}
+
+}
+/* ===== DASHBOARD PANEL ===== */
+
+.panel{
+
+display:flex;
+
+gap:30px;
+
+padding:60px 20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.left-panel,
+.right-panel{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.bar{
+
+margin:25px 0;
+
+}
+
+.progress{
+
+width:100%;
+
+height:14px;
+
+background:#111;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-top:8px;
+
+}
+
+.progress div{
+
+height:100%;
+
+background:#00ff88;
+
+box-shadow:0 0 20px #00ff88;
+
+animation:pulse 2s infinite alternate;
+
+}
+
+.cpu{width:96%;}
+.ram{width:82%;}
+.network{width:100%;}
+.security{width:99%;}
+
+@keyframes pulse{
+
+from{opacity:.6;}
+
+to{opacity:1;}
+
+}
+
+/* TERMINAL */
+
+.terminal-window{
+
+border:2px solid #00ff88;
+
+border-radius:12px;
+
+overflow:hidden;
+
+box-shadow:0 0 25px #00ff88;
+
+}
+
+.terminal-header{
+
+background:#111;
+
+padding:12px;
+
+}
+
+.red,.yellow,.green{
+
+display:inline-block;
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+margin-right:6px;
+
+}
+
+.red{background:#ff4d4d;}
+.yellow{background:#ffd633;}
+.green{background:#00ff88;}
+
+.terminal-body{
+
+padding:20px;
+
+line-height:2;
+
+background:#000;
+
+}
+
+/* CONTACT */
+
+#contact{
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.contact-card{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+max-width:450px;
+
+margin:auto;
+
+}
+
+.contact-card a{
+
+text-decoration:none;
+
+color:#00ff88;
+
+padding:15px;
+
+border:1px solid #00ff88;
+
+border-radius:10px;
+
+transition:.3s;
+
+}
+
+.contact-card a:hover{
+
+background:#00ff88;
+
+color:#000;
+
+box-shadow:0 0 20px #00ff88;
+
+}
+/* ==========================
+LIVE INFO
+========================== */
+
+.live-info{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+padding:40px 20px;
+
+}
+
+.info-box{
+
+padding:25px;
+
+text-align:center;
+
+border:1px solid #00ff88;
+
+border-radius:15px;
+
+background:rgba(0,0,0,.5);
+
+box-shadow:0 0 20px #00ff88;
+
+}
+
+.info-box h3{
+
+margin-bottom:10px;
+
+}
+
+.info-box p{
+
+font-size:20px;
+
+color:#fff;
+
+}
+/* PROJECTS */
+
+#projects{
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.project-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+.project{
+
+padding:25px;
+
+border:1px solid #00ff88;
+
+border-radius:15px;
+
+background:#050505;
+
+transition:.4s;
+
+}
+
+.project:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px #00ff88;
+
+}
+
+/* CV BUTTON */
+
+#cv{
+
+padding:60px;
+
+text-align:center;
+
+}
+
+.cv-btn{
+
+display:inline-block;
+
+padding:16px 45px;
+
+background:#00ff88;
+
+color:#000;
+
+text-decoration:none;
+
+font-weight:bold;
+
+border-radius:50px;
+
+transition:.3s;
+
+}
+
+.cv-btn:hover{
+
+box-shadow:0 0 30px #00ff88;
+
+transform:scale(1.08);
+
+}
+/* ABOUT */
+
+#about{
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+justify-content:center;
+
+gap:40px;
+
+padding:70px 20px;
+
+}
+
+.profile img{
+
+width:240px;
+
+height:240px;
+
+border-radius:50%;
+
+border:4px solid #00ff88;
+
+box-shadow:0 0 30px #00ff88;
+
+object-fit:cover;
+
+}
+
+.about-text{
+
+max-width:600px;
+
+}
+
+.about-text h2{
+
+margin-bottom:20px;
+
+font-size:35px;
+
+}
+
+.about-text p{
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+.social{
+
+margin-top:25px;
+
+}
+
+.social a{
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:50px;
+
+height:50px;
+
+margin:8px;
+
+border:1px solid #00ff88;
+
+border-radius:50%;
+
+color:#00ff88;
+
+font-size:22px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.social a:hover{
+
+background:#00ff88;
+
+color:#000;
+
+box-shadow:0 0 20px #00ff88;
+
+}
+/* LIVE TERMINAL */
+
+.terminal-body{
+
+height:260px;
+
+overflow-y:auto;
+
+font-size:17px;
+
+padding:20px;
+
+line-height:1.9;
+
+}
+
+.terminal-body::-webkit-scrollbar{
+
+width:4px;
+
+}
+
+.terminal-body::-webkit-scrollbar-thumb{
+
+background:#00ff88;
+
+}
+/* STATS */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+padding:50px 20px;
+
+}
+
+.stat-card{
+
+padding:30px;
+
+text-align:center;
+
+border:1px solid #00ff88;
+
+border-radius:15px;
+
+background:rgba(0,0,0,.6);
+
+box-shadow:0 0 20px rgba(0,255,136,.3);
+
+transition:.4s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 30px #00ff88;
+
+}
+
+.stat-card h2{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+color:#00ff88;
+
+}
+
+.stat-card p{
+
+font-size:18px;
+
+}
+/* HERO */
+
+.hero-banner{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:40px;
+
+padding:70px 20px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-left{
+
+flex:1;
+
+min-width:300px;
+
+}
+
+.hero-left h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+text-shadow:0 0 20px #00ff88;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.hire-btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:15px 40px;
+
+background:#00ff88;
+
+color:#000;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.hire-btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px #00ff88;
+
+}
+
+.hero-right{
+
+flex:1;
+
+text-align:center;
+
+}
+
+.profile-ring{
+
+width:260px;
+
+height:260px;
+
+margin:auto;
+
+border-radius:50%;
+
+padding:6px;
+
+background:#00ff88;
+
+box-shadow:0 0 35px #00ff88;
+
+animation:rotateRing 8s linear infinite;
+
+}
+
+.profile-ring img{
+
+width:100%;
+
+height:100%;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+@keyframes rotateRing{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+/* NAVBAR */
+
+nav{
+
+position:sticky;
+
+top:0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 40px;
+
+background:rgba(0,0,0,.85);
+
+backdrop-filter:blur(10px);
+
+border-bottom:1px solid #00ff88;
+
+z-index:999;
+
+}
+
+.logo-nav{
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#00ff88;
+
+text-shadow:0 0 10px #00ff88;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:25px;
+
+}
+
+nav ul li a{
+
+color:#00ff88;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+text-shadow:0 0 15px #00ff88;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+/* BOOT LOGO */
+
+.boot-logo{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.boot-logo i{
+
+font-size:70px;
+
+color:#00ff88;
+
+text-shadow:0 0 30px #00ff88;
+
+animation:pulseLogo 2s infinite;
+
+}
+
+.boot-logo h2{
+
+margin-top:15px;
+
+letter-spacing:3px;
+
+}
+
+@keyframes pulseLogo{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* FLASH */
+
+.flash{
+
+animation:flash .3s;
+
+}
+
+@keyframes flash{
+
+0%{
+
+background:#00ff88;
+
+}
+
+100%{
+
+background:#000;
+
+}
+
+}
+/* CUSTOM CURSOR */
+
+body{
+
+cursor:none;
+
+}
+
+#cursor{
+
+width:15px;
+
+height:15px;
+
+background:#00ff88;
+
+border-radius:50%;
+
+position:fixed;
+
+pointer-events:none;
+
+z-index:99999;
+
+box-shadow:0 0 20px #00ff88;
+
+transition:.05s;
+
+}
+
+#cursorBlur{
+
+width:180px;
+
+height:180px;
+
+background:rgba(0,255,136,.15);
+
+border-radius:50%;
+
+position:fixed;
+
+pointer-events:none;
+
+filter:blur(50px);
+
+z-index:99998;
+
+transition:.15s;
+
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#000;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#00ff88;
+
+border-radius:20px;
+
+}
+
+/* GLOW */
+
+.card,
+.project,
+.info-box,
+.stat-card,
+.loginBox{
+
+transition:.4s;
+
+}
+
+.card:hover,
+.project:hover,
+.info-box:hover,
+.stat-card:hover,
+.loginBox:hover{
+
+box-shadow:0 0 35px #00ff88;
+
+}
